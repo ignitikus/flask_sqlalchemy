@@ -29,7 +29,8 @@ session = DBSession()
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html')
+    user = 'Niko'
+    return render_template('index.html', user=user)
 
 
 @app.route('/auth')
