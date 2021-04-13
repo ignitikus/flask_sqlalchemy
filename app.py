@@ -32,6 +32,16 @@ def hello_world():
     return render_template('index.html')
 
 
+@app.route('/auth')
+def auth():
+    return render_template('login_register.html')
+
+
+@app.route('/test2')
+def test2():
+    return render_template('test2.html')
+
+
 @app.route('/login', methods=['POST'])
 def login():
     if request.method == 'POST':
